@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LLM Arena</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-stone-900 h-screen w-full flex flex-col">
+    <main class="flex items-center justify-center bg-stone-900 w-full h-screen">
+        <div class="p-6 flex flex-col container max-w-7xl h-[85vh] rounded-md bg-indigo-900/60">
+            <table class="w-full p-4 font-mono font-semibold">
+                <thead class="text-indigo-500 bg-indigo-900">
+                    <tr>
+                        <th class="pl-4 py-3 w-1 text-center whitespace-nowrap">#</th>
+                        <th class="px-2 py-3 text-left w-64">name</th>
+                        <th class="px-2 py-3 text-right w-24">
+                            <div>wpm</div>
+                            <div class="text-xs text-indigo-600">adjusted</div>
+                        </th>
+                        <th class="px-2 py-3 text-right w-24">
+                            <div>raw</div>
+                            <div class="text-xs text-indigo-600">uncorrected</div>
+                        </th>
+                        <th class="px-2 py-3 text-right w-32 pr-6">date</th>
+                    </tr>
+                </thead>
+                <tbody class="text-indigo-400 font-bold">
+                    <tr class="bg-indigo-950/50">
+                        <td class="pl-4 py-3 text-center">1</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2">
+                            <p class="w-4 h-4 rounded-full bg-purple-700"></p>Alice
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>120.00</div>
+                            <div class="text-sm text-indigo-600">96.12%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>125.00</div>
+                            <div class="text-sm text-indigo-600">100.00%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-indigo-600">14:30:00</div>
+                        </td>
+                    </tr>
+                    <tr class="bg-indigo-900/80">
+                        <td class="pl-4 py-3 text-center">2</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2">
+                            <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Bob
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>115.00</div>
+                            <div class="text-sm text-indigo-600">97.78%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>118.00</div>
+                            <div class="text-sm text-indigo-600">100%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-indigo-600">00:03:00</div>
+                        </td>
+                    </tr>
+                    <tr class="bg-indigo-950/50">
+                        <td class="pl-4 py-3 text-center">3</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2">
+                            <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Charlie
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>108.00</div>
+                            <div class="text-sm text-indigo-600">96.34%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>112.00</div>
+                            <div class="text-sm text-indigo-600">100.00%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-indigo-600">12:10:00</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+</body>
+</html>
