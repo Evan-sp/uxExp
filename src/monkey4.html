@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LLM Arena</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        table th, table td {
+            cursor: default;
+        }
+    </style>
+</head>
+<body class="bg-slate-700 h-screen w-full p-8">
+
+    <div class="flex justify-between items-center">
+        <div class="font-mono text-4xl text-slate-300 mb-2">
+            Mono-Wono Lonon
+            <div class="text-slate-500 text-2xl">oumo loumo yuou: 9:00</div>
+        </div>
+        <div class="flex">
+            <div class="h-10 w-44 bg-slate-800 rounded-md mx-1 flex items-center justify-center text-slate-400 font-mono text-lg">One</div>
+            <div class="h-10 w-44 bg-slate-600 rounded-md mx-1 flex items-center justify-center text-slate-400 font-mono text-lg">Two</div>
+        </div>
+    </div>
+
+    <main class="flex justify-center bg-slate-700 w-full">
+        <div class="flex w-full h-[85vh] rounded-md bg-slate-700">
+            <div class="overflow-y-scroll pr-3 text-sm">
+                        <table class="m-auto w-full font-mono">
+                            <thead class="text-slate-500 bg-slate-700 w-full sticky top-0 z-50">
+                                <tr class="">
+                                    <th class="pl-4 py-2 w-1 text-center whitespace-nowrap sticky top-0">#</th>
+                                    <th class="px-2 py-2 text-left sticky top-0 w-80">name</th>
+                                    <th class="px-2 py-2 text-right sticky top-0">
+                                        <div>wpm</div>
+                                        <div class="text-xs text-slate-600">adjusted</div>
+                                    </th>
+                                    <th class="px-2 py-2 text-right sticky top-0">
+                                        <div>raw</div>
+                                        <div class="text-xs text-slate-600">uncorrected</div>
+                                    </th>
+                                    <th class="px-2 py-2 text-right pr-6 sticky top-0">date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-400 font-light">
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300 rounded-l-md">1</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        Alice
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right text-slate-300">
+                                        <div>120.00</div>
+                                        <div class="text-sm text-slate-600">96.12%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right">
+                                        <div>125.00</div>
+                                        <div class="text-sm text-slate-600">100.00%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right pr-6 rounded-r-md">
+                                        <div>2023-10-15</div>
+                                        <div class="text-sm text-slate-600">14:30:00</div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">2</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Bob
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right">
+                                        <div>115.00</div>
+                                        <div class="text-sm text-slate-600">97.78%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right text-slate-300">
+                                        <div>118.00</div>
+                                        <div class="text-sm text-slate-600">100%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right pr-6">
+                                        <div>2023-10-15</div>
+                                        <div class="text-sm text-slate-600">00:03:00</div>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+            </div>
+            <div class="overflow-y-scroll pr-3 text-sm">
+                        <table class="m-auto w-full font-mono">
+                            <thead class="text-slate-500 bg-slate-700 w-full sticky top-0 z-50">
+                                <tr class="">
+                                    <th class="pl-4 py-2 w-1 text-center whitespace-nowrap sticky top-0">#</th>
+                                    <th class="px-2 py-2 text-left sticky top-0 w-80">name</th>
+                                    <th class="px-2 py-2 text-right sticky top-0">
+                                        <div>wpm</div>
+                                        <div class="text-xs text-slate-600">adjusted</div>
+                                    </th>
+                                    <th class="px-2 py-2 text-right sticky top-0">
+                                        <div>raw</div>
+                                        <div class="text-xs text-slate-600">uncorrected</div>
+                                    </th>
+                                    <th class="px-2 py-2 text-right pr-6 sticky top-0">date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-400 font-light">
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300 rounded-l-md">1</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        Alice
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right text-slate-300">
+                                        <div>120.00</div>
+                                        <div class="text-sm text-slate-600">96.12%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right">
+                                        <div>125.00</div>
+                                        <div class="text-sm text-slate-600">100.00%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right pr-6 rounded-r-md">
+                                        <div>2023-10-15</div>
+                                        <div class="text-sm text-slate-600">14:30:00</div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">2</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Bob
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right">
+                                        <div>115.00</div>
+                                        <div class="text-sm text-slate-600">97.78%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right text-slate-300">
+                                        <div>118.00</div>
+                                        <div class="text-sm text-slate-600">100%</div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right pr-6">
+                                        <div>2023-10-15</div>
+                                        <div class="text-sm text-slate-600">00:03:00</div>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">3</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Charlie
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>110.00</div><div class="text-sm text-slate-600">95.65%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>115.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">23:45:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">4</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Dave
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">94.59%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>111.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">22:15:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-800/20 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">5</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Eve
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>98.00</div><div class="text-sm text-slate-600">93.33%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>105.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">21:30:00</div></td>
+                                </tr>
+                                <tr class="bg-slate-700 rounded-md">
+                                    <td class="pl-4 py-2 text-center text-slate-300">6</td>
+                                    <td class="px-2 py-2">
+                                        <div class="flex items-center gap-2 text-slate-300 font-normal">
+                                            <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Frank
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 text-right"><div>95.00</div><div class="text-sm text-slate-600">92.23%</div></td>
+                                    <td class="px-2 py-2 text-right"><div>103.00</div><div class="text-sm text-slate-600">100%</div></td>
+                                    <td class="px-2 py-2 text-right pr-6"><div>2023-10-14</div><div class="text-sm text-slate-600">20:45:00</div></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+            </div>
+         </div>
+</body>
+</html>
