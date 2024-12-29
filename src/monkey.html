@@ -5,35 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>LLM Arena</title>
     <link href="./output.css" rel="stylesheet">
+    <style>
+        table th, table td {
+            cursor: default;
+        }
+    </style>
 </head>
 <body class="bg-stone-900 h-screen w-full flex flex-col">
-    <main class="flex items-center justify-center bg-stone-900 w-full h-screen">
-        <div class="p-6 flex flex-col container max-w-7xl h-[85vh] rounded-md bg-indigo-900/60">
-            <table class="w-full p-4 font-mono font-semibold">
-                <thead class="text-indigo-500 bg-indigo-900">
+    <main class="flex items-center justify-center bg-indigo-900 w-full h-screen">
+        <div class="p-6 flex justify-center w-full h-[85vh] rounded-md bg-indigo-900">
+            <div class="w-[50rem] overflow-y-scroll pr-3">
+            <table class="m-auto w-full font-mono font-semibold">
+                <thead class="text-indigo-500 bg-indigo-900 w-full sticky top-0 z-50">
                     <tr>
-                        <th class="pl-4 py-3 w-1 text-center whitespace-nowrap">#</th>
-                        <th class="px-2 py-3 text-left w-64">name</th>
-                        <th class="px-2 py-3 text-right w-24">
+                        <th class="pl-4 py-3 w-1 text-center whitespace-nowrap sticky top-0">#</th>
+                        <th class="px-2 py-3 text-left w-64 sticky top-0">name</th>
+                        <th class="px-2 py-3 text-right w-24 sticky top-0">
                             <div>wpm</div>
                             <div class="text-xs text-indigo-600">adjusted</div>
                         </th>
-                        <th class="px-2 py-3 text-right w-24">
+                        <th class="px-2 py-3 text-right w-24 sticky top-0">
                             <div>raw</div>
                             <div class="text-xs text-indigo-600">uncorrected</div>
                         </th>
-                        <th class="px-2 py-3 text-right w-32 pr-6">date</th>
+                        <th class="px-2 py-3 text-right w-32 pr-6 sticky top-0">date</th>
                     </tr>
                 </thead>
                 <tbody class="text-indigo-400 font-bold">
                     <tr class="bg-indigo-950/50">
-                        <td class="pl-4 py-3 text-center">1</td>
+                        <td class="pl-4 py-3 text-center text-indigo-300">1</td>
                         <td class="px-2 py-3">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 text-indigo-300">
                             <p class="w-4 h-4 rounded-full bg-purple-700"></p>Alice
                             </div>
                         </td>
-                        <td class="px-2 py-3 text-right">
+                        <td class="px-2 py-3 text-right text-indigo-300">
                             <div>120.00</div>
                             <div class="text-sm text-indigo-600">96.12%</div>
                         </td>
@@ -47,9 +53,9 @@
                         </td>
                     </tr>
                     <tr class="bg-indigo-900/80">
-                        <td class="pl-4 py-3 text-center">2</td>
+                        <td class="pl-4 py-3 text-center text-indigo-300">2</td>
                         <td class="px-2 py-3">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 text-indigo-300">
                             <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Bob
                             </div>
                         </td>
@@ -57,7 +63,7 @@
                             <div>115.00</div>
                             <div class="text-sm text-indigo-600">97.78%</div>
                         </td>
-                        <td class="px-2 py-3 text-right">
+                        <td class="px-2 py-3 text-right text-indigo-300">
                             <div>118.00</div>
                             <div class="text-sm text-indigo-600">100%</div>
                         </td>
@@ -67,9 +73,9 @@
                         </td>
                     </tr>
                     <tr class="bg-indigo-950/50">
-                        <td class="pl-4 py-3 text-center">3</td>
+                        <td class="pl-4 py-3 text-center text-indigo-300">3</td>
                         <td class="px-2 py-3">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 text-indigo-300">
                             <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Charlie
                             </div>
                         </td>
@@ -77,7 +83,7 @@
                             <div>108.00</div>
                             <div class="text-sm text-indigo-600">96.34%</div>
                         </td>
-                        <td class="px-2 py-3 text-right">
+                        <td class="px-2 py-3 text-right text-indigo-300">
                             <div>112.00</div>
                             <div class="text-sm text-indigo-600">100.00%</div>
                         </td>
@@ -86,8 +92,215 @@
                             <div class="text-sm text-indigo-600">12:10:00</div>
                         </td>
                     </tr>
+
+        <tr class="bg-indigo-900/80"></tr>
+            <td class="pl-4 py-3 text-center text-indigo-300">4</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>David
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>105.00</div>
+                <div class="text-sm text-indigo-600">95.45%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>110.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">15:45:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-950/50">
+            <td class="pl-4 py-3 text-center text-indigo-300">5</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Eve
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>102.00</div>
+                <div class="text-sm text-indigo-600">94.44%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>108.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">16:20:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-900/80">
+            <td class="pl-4 py-3 text-center text-indigo-300">6</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>Frank
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>98.00</div>
+                <div class="text-sm text-indigo-600">93.33%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>105.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">17:05:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-950/50">
+            <td class="pl-4 py-3 text-center text-indigo-300">7</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Grace
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>95.00</div>
+                <div class="text-sm text-indigo-600">92.23%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>103.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">18:15:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-900/80">
+            <td class="pl-4 py-3 text-center text-indigo-300">8</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>Henry
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>92.00</div>
+                <div class="text-sm text-indigo-600">91.09%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>101.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">19:30:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-900/80"></tr>
+            <td class="pl-4 py-3 text-center text-indigo-300">4</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>David
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>105.00</div>
+                <div class="text-sm text-indigo-600">95.45%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>110.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">15:45:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-950/50">
+            <td class="pl-4 py-3 text-center text-indigo-300">5</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Eve
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>102.00</div>
+                <div class="text-sm text-indigo-600">94.44%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>108.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">16:20:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-900/80">
+            <td class="pl-4 py-3 text-center text-indigo-300">6</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>Frank
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>98.00</div>
+                <div class="text-sm text-indigo-600">93.33%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>105.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">17:05:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-950/50">
+            <td class="pl-4 py-3 text-center text-indigo-300">7</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Grace
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>95.00</div>
+                <div class="text-sm text-indigo-600">92.23%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>103.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">18:15:00</div>
+            </td>
+        </tr>
+        <tr class="bg-indigo-900/80">
+            <td class="pl-4 py-3 text-center text-indigo-300">8</td>
+            <td class="px-2 py-3">
+                <div class="flex items-center gap-2 text-indigo-300">
+                <p class="w-4 h-4 rounded-full bg-purple-700"></p>Henry
+                </div>
+            </td>
+            <td class="px-2 py-3 text-right">
+                <div>92.00</div>
+                <div class="text-sm text-indigo-600">91.09%</div>
+            </td>
+            <td class="px-2 py-3 text-right text-indigo-300">
+                <div>101.00</div>
+                <div class="text-sm text-indigo-600">100.00%</div>
+            </td>
+            <td class="px-2 py-3 text-right pr-6">
+                <div>2023-10-15</div>
+                <div class="text-sm text-indigo-600">19:30:00</div>
+            </td>
+        </tr>
+
+
+
+
                 </tbody>
             </table>
+            </div>
+
          </div>
 </body>
 </html>
