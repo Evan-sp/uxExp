@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LLM Arena</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        table th, table td {
+            cursor: default;
+        }
+    </style>
+</head>
+<body class="bg-slate-700 h-screen w-full flex flex-col">
+    <main class="flex items-center justify-center bg-slate-700 w-full h-screen">
+        <div class="p-6 flex justify-center w-full h-[85vh] rounded-md bg-slate-700">
+            <div class="w-[50rem] overflow-y-scroll pr-3">
+            <table class="m-auto w-full font-mono font-semibold">
+                <thead class="text-slate-500 bg-slate-700 w-full sticky top-0 z-50">
+                    <tr>
+                        <th class="pl-4 py-3 w-1 text-center whitespace-nowrap sticky top-0">#</th>
+                        <th class="px-2 py-3 text-left w-64 sticky top-0">name</th>
+                        <th class="px-2 py-3 text-right w-24 sticky top-0">
+                            <div>wpm</div>
+                            <div class="text-xs text-slate-600">adjusted</div>
+                        </th>
+                        <th class="px-2 py-3 text-right w-24 sticky top-0">
+                            <div>raw</div>
+                            <div class="text-xs text-slate-600">uncorrected</div>
+                        </th>
+                        <th class="px-2 py-3 text-right w-32 pr-6 sticky top-0">date</th>
+                    </tr>
+                </thead>
+                <tbody class="text-slate-400 font-bold">
+                    <tr class="bg-slate-800/60">
+                        <td class="pl-4 py-3 text-center text-slate-300">1</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2 text-slate-300">
+                            <p class="w-4 h-4 rounded-full bg-purple-700"></p>Alice
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right text-slate-300">
+                            <div>120.00</div>
+                            <div class="text-sm text-slate-600">96.12%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>125.00</div>
+                            <div class="text-sm text-slate-600">100.00%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-slate-600">14:30:00</div>
+                        </td>
+                    </tr>
+                    <tr class="bg-slate-700">
+                        <td class="pl-4 py-3 text-center text-slate-300">2</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2 text-slate-300">
+                            <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Bob
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>115.00</div>
+                            <div class="text-sm text-slate-600">97.78%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right text-slate-300">
+                            <div>118.00</div>
+                            <div class="text-sm text-slate-600">100%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-slate-600">00:03:00</div>
+                        </td>
+                    </tr>
+                    <tr class="bg-slate-800/60">
+                        <td class="pl-4 py-3 text-center text-slate-300">3</td>
+                        <td class="px-2 py-3">
+                            <div class="flex items-center gap-2 text-slate-300">
+                            <p class="w-4 h-4 rounded-full bg-fuchsia-700"></p>Charlie
+                            </div>
+                        </td>
+                        <td class="px-2 py-3 text-right">
+                            <div>108.00</div>
+                            <div class="text-sm text-slate-600">96.34%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right text-slate-300">
+                            <div>112.00</div>
+                            <div class="text-sm text-slate-600">100.00%</div>
+                        </td>
+                        <td class="px-2 py-3 text-right pr-6">
+                            <div>2023-10-15</div>
+                            <div class="text-sm text-slate-600">12:10:00</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+         </div>
+</body>
+</html>
