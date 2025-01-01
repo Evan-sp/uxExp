@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LLM Arena</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        table th, table td {
+            cursor: default;
+        }
+    </style>
+</head>
+<body class="bg-slate-700 h-screen w-full flex flex-col">
+    <main class="flex h-full w-full">
+        <div class="flex flex-col bg-slate-900 w-full h-full p-4 items-center justify-start">
+            <div class="flex items-center self-start text-slate-400 font-semibold text-lg cursor-pointer">
+                <div class="w-5 h-5 inline-block align-middle mx-1">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="w-5 h-5 inline-block align-middle mx-2">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="7" y="11" width="10" height="8" rx="1" stroke="currentColor" stroke-width="3"/>
+                        <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="">ChatGPT 4o</div>
+            </div>
+            <div class="mt-8 flex flex-col items-center w-full max-w-3xl overflow-scroll">
+                <div class="flex flex-col justify-start h-[72vh] w-full pt-8 font-light">
+                    <div class="mb-5 text-slate-100 bg-slate-700/80 w-fit px-5 py-3 rounded-3xl ml-auto tracking-wide">count to 10</div>
+                    <div class="flex text-slate-100 w-fit max-w-[30rem] py-2 px-4 rounded-xl tracking-wide">
+                        <div class="w-8 h-8 rounded-full mr-6 flex-shrink-0 ring-1 ring-slate-400/40 flex items-center justify-center">
+                            <svg class="w-full h-full mt-1" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8C14 8 12 10 12 12C12 14 14 16 16 16C18 16 20 14 20 12C20 10 18 8 16 8M16 4C20 4 24 8 24 12C24 16 20 20 16 20C12 20 8 16 8 12C8 8 12 4 16 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="text-sm font-light">
+                            Sure! Here's counting to ten: <br/>
+                            <span class="mt-2 block">1, 2, 3, 4, 5, 6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed bottom-6 bg-slate-700/80 w-full max-w-3xl mx-auto mt-4 rounded-3xl">
+                    <textarea class="rounded-3xl w-full h-12 bg-slate-700/50 text-slate-100 p-4 resize-none focus:outline-none appearance-none" placeholder="Type your message..."></textarea>
+                    <div class="flex items-center justify-between px-4 pb-3 pt-1">
+                        <div class="flex">
+                            <div class="mr-4 flex cursor-pointer items-center ring-1 ring-slate-300/30 text-slate-200 rounded-lg px-2 py-1 text-xs">
+                                <div class="w-5 h-5 mr-1 inline-block align-middle">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="7" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="17" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h1>
+                                    DeepThink
+                                </h1>
+                            </div>
+                            <div class="flex cursor-pointer items-center ring-1 ring-slate-300/30 text-slate-200 rounded-lg px-2 py-1 text-xs">
+                                <div class="w-5 h-5 mr-1 inline-block align-middle">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h1>
+                                    Search
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="bg-slate-500 rounded-xl p-1 cursor-pointer">
+                            <svg class="w-6 h-6 text-slate-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4L20 12H15V20H9V12H4L12 4Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

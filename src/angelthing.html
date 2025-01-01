@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LLM Arena</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        table th, table td {
+            cursor: default;
+        }
+    </style>
+</head>
+<body class="bg-stone-700 h-screen w-full flex flex-col">
+    <main class="flex flex-col bg-slate-800 w-full h-screen p-7">
+        <div class="max-w-6xl w-full mx-auto mb-16 text-sm">
+            <div class="flex justify-between font-semibold font-mono">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-orange-500 cursor-default mr-3">
+                        <span class="text-3xl">⚔️</span>
+                    </div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-centerl text-slate-200 cursor-pointer">Pit Leaderboard</div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-centerl text-slate-200 cursor-pointer">Infernals</div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-centerl text-slate-200 cursor-pointer">Helltides</div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-centerl text-slate-200 cursor-pointer">World Boss</div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-centerl text-slate-200 cursor-pointer">Schedule</div>
+                    <div class="mx-3 p-2 px-3 rounded-md bg-slate-900 flex items-center justify-center text-slate-200 cursor-pointer">
+                        <svg class="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"/>
+                        </svg>
+                        Discord Bot
+                    </div>
+                </div>
+                <div>
+                    <button class="mx-1 inline-flex items-center rounded-md bg-indigo-500 py-1 px-3 text-indigo-100 ring-1 ring-inset ring-indigo-400/30 font-semibold font-mono text-sm"><span class="mr-0.5">Login</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-between">
+            <div class="mb-10">
+                <h1 class="text-2xl font-semibold text-slate-200 text-center">Diablo 4 Season 6 Pit Leaderboard</h1>
+                <div class="m-auto w-fit mt-4">
+                    <button class="mx-1 inline-flex items-center rounded-md bg-indigo-400/10 py-1 px-3 text-indigo-200 ring-1 ring-inset ring-indigo-400/30 font-semibold font-mono text-sm"><span class="mr-0.5">Refresh</span></button>
+                    <button class="mx-1 inline-flex items-center rounded-md bg-indigo-400/10 py-1 px-3 text-indigo-200 ring-1 ring-inset ring-indigo-400/30 font-semibold font-mono text-sm"><span class="mr-0.5">Season 6</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="-mr-1 h-5 w-5 text-gray-400"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <button class="mx-1 inline-flex items-center rounded-md bg-indigo-400/10 px-2 py-1 text-indigo-200 ring-1 ring-inset ring-indigo-400/30 font-semibold font-mono text-xs"><span class="mr-0.5 text-sm">FAQ</span>❓</button>
+                </div>
+            </div>
+            <div class="flex items-center justify-center my-8">
+                <div class="border-gray-400 border-4 h-60 w-52 rounded-xl mx-4 bg-gray-600/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(156,163,175,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(156,163,175,0.6)" font-size="16">AI</text>
+                    </svg>
+                </div>
+                <div class="border-green-600 border-4 h-60 w-52 rounded-xl mx-4 bg-green-600/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(0,255,165,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="40;50;40" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.4;0.6" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(0,255,165,0.6)" font-size="16">RL</text>
+                    </svg>
+                </div>
+                <div class="border-purple-800 border-4 h-60 w-52 rounded-xl mx-4 bg-purple-900/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(147,112,219,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="35;45;35" dur="2.5s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(147,112,219,0.6)" font-size="16">ML</text>
+                    </svg>
+                </div>
+                <div class="border-gray-400 border-4 h-60 w-52 rounded-xl mx-4 bg-gray-600/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(156,163,175,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(156,163,175,0.6)" font-size="16">AI</text>
+                    </svg>
+                </div>
+                <div class="border-green-600 border-4 h-60 w-52 rounded-xl mx-4 bg-green-600/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(0,255,165,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="40;50;40" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.4;0.6" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(0,255,165,0.6)" font-size="16">RL</text>
+                    </svg>
+                </div>
+                <div class="border-purple-800 border-4 h-60 w-52 rounded-xl mx-4 bg-purple-900/30 transition-all">
+                    <svg viewBox="0 0 100 100" class="w-full h-full p-4 cursor-pointer">
+                        <circle cx="50" cy="50" r="40" stroke="rgba(147,112,219,0.6)" stroke-width="4" fill="none">
+                            <animate attributeName="r" values="35;45;35" dur="2.5s" repeatCount="indefinite"/>
+                            <animate attributeName="stroke-opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="50" y="55" text-anchor="middle" fill="rgba(147,112,219,0.6)" font-size="16">ML</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="flex mx-auto flex-wrap grid-cols-5 justify-center gap-4 md:gap-6 text-sm md:text-lg">
+            <div class="cursor-pointer group"><img src="/_nuxt/barbarian.97a80fa6.png" alt="Barbarian" class="w-16 h-16 mx-auto group-hover:brightness-150 transition-all">
+                <h3 class="opacity-50 text-center font-semibold font-mono group-hover:opacity-100"> Barbarian </h3>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
