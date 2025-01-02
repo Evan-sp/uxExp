@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cylinder</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-stone-800 h-screen w-full">
+    <main class="flex items-center justify-center h-full w-full">
+        <div id="scrollable-container" class="group flex flex-col text-center font-semibold text-slate-400 font-mono cursor-pointer">
+            <ul id="myList" class="flex flex-col justify-center gap-2 bg-white p-4 rounded-lg shadow-lg h-40 w-40">
+                <li class="">John</li>
+                <li class="">Amanda</li>
+                <li class="">Sarah</li>
+            </ul>
+            <script>
+    // Grab our elements from the DOM
+    const nameList = document.getElementById("myList");
+
+    // Helper to convert the current list items into an array
+    function getListArray() {
+      return Array.from(nameList.children);
+    }
+
+    // Re-render the list (after we manipulate the array)
+    function renderList(items) {
+      // Clear existing items
+      while (nameList.firstChild) {
+        nameList.removeChild(nameList.firstChild);
+      }
+      // Append each item in the new order
+      items.forEach((item) => nameList.appendChild(item));
+      highlightMiddleElement();
+    }
+
+    function moveDown() {
+        const items = getListArray();
+        const lastItem = items.pop();  // remove last item
+        items.unshift(lastItem);       // place it at the front
+        renderList(items);
+    }
+
+    function moveUp() {
+        const items = getListArray();
+        const firstItem = items.shift();  // remove first item
+        items.push(firstItem);            // place it at the end
+        renderList(items);
+    }
+
+    function highlightMiddleElement() {
+      const items = getListArray();
+      items.forEach(item => item.classList.remove("text-3xl"));
+      const middleIndex = Math.floor(items.length / 2);
+      if (items[middleIndex]) {
+        items[middleIndex].classList.add("text-3xl");
+      }
+    }
+
+    function throttle(fn, limit) {
+        let inThrottle;
+        return function(...args) {
+        if (!inThrottle) {
+            fn.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+        };
+    }
+
+
+    function handleScroll(event) {
+            if (event.deltaY > 0) {
+                moveUp();
+            } else {
+                moveDown();
+            }
+    }
+
+    const throttledScrollHandler = throttle(handleScroll, 400);
+    let scrollableContainer = document.getElementById("scrollable-container");
+    // document.getElementById("scrollable-container").addEventListener("scroll", throttledScrollHandler);
+
+    // Listen for mouse wheel events
+    scrollableContainer.addEventListener("wheel", throttledScrollHandler);
+
+    // Listen for touch events
+    scrollableContainer.addEventListener("touchmove", throttledScrollHandler);
+
+    highlightMiddleElement();
+            </script>
+        </div>
+    </main>
+</body>
+</html>

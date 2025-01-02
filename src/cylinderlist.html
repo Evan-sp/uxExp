@@ -9,7 +9,7 @@
 <body class="bg-stone-800 h-screen w-full">
     <main class="flex items-center justify-center h-full w-full">
         <div class="group flex flex-col text-center font-semibold text-slate-400 font-mono">
-            <ul id="myList" class="flex flex-col gap-2 bg-white p-4 rounded-lg shadow-lg w-40">
+            <ul id="myList" class="flex flex-col gap-2 bg-white p-4 rounded-lg shadow-lg w-40 h-96">
                 <li class="text-xl">John</li>
                 <li class="text-xl">Amanda</li>
                 <li class="text-xl">Sarah</li>
@@ -23,21 +23,27 @@
               </ul>
               
               <script>
+                const list = document.querySelector('#myList');
                 const items = [...document.querySelectorAll('#myList li')];
-              
                 const sizes = ['text-3xl', 'text-2xl', 'text-xl', 'text-lg', 'text-base', 'text-sm', 'text-xs', 'text-[]'];
+                let hoverTimer;
+
                 items.forEach((item, hoveredIndex) => {
-                  item.addEventListener('mouseenter', () => {
-                    items.forEach((other, i) => {
-                      let dist = Math.abs(i - hoveredIndex);
-                      if (dist >= sizes.length) dist = sizes.length - 1; 
-                      other.className = sizes[dist] + ' transition-all';
+                    item.addEventListener('mouseenter', () => {
+                        clearTimeout(hoverTimer);
+                        hoverTimer = setTimeout(() => {
+                            items.forEach((other, i) => {
+                            let dist = Math.abs(i - hoveredIndex);
+                            if (dist >= sizes.length) dist = sizes.length - 1; 
+                            other.className = sizes[dist] + ' transition-all';
+                            });
+                        }, 10);
                     });
-                  });
-                  // Reset on mouse leave
-                  item.addEventListener('mouseleave', () => {
-                    items.forEach(other => (other.className = 'text-xl transition-all'));
-                  });
+
+                    list.addEventListener('mouseleave', () => {
+                        clearTimeout(hoverTimer);
+                        items.forEach(li => (li.className = 'text-xl transition-all'));
+                    });
                 });
               </script>
         </div>
